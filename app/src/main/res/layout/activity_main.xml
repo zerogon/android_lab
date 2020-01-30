@@ -9,8 +9,9 @@
     tools:context=".MainActivity">
 
 
+
     <TextView
-        android:id="@+id/txtHello"
+        android:id="@+id/btnLogcatTest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!"

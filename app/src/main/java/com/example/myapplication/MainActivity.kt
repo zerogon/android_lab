@@ -1,19 +1,25 @@
 package com.example.myapplication
 
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
+import android.util.Log
+
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-
+    var nCount : Int = 0
+    val nMaxCount : Int = 10
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        var txt = findViewById<TextView>(R.id.txtHello)
-        txt.text = "안녕하세요"
-        txt.textSize = 32.0F
-        txt.setTextColor(Color.parseColor("#FF0000"))
+        btnLogcatTest.setOnClickListener{
+            Log.d(javaClass.name,"${nCount++} clicked")
+            try{
+                val nResult = nMaxCount /(nMaxCount-nCount)
+                Log.d("MyLog", "nMaxCount/(nMaxCount-nCount) is ${nResult}")
+            }catch (e:Exception){
+                Log.d("MyLog","${nCount}: ${e.toString()}" )
+            }
+        }
     }
 }
