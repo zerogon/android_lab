@@ -23,6 +23,25 @@ class MainActivity : AppCompatActivity() {
         }
     }
     /*
+    *   btnLogcatTest.setOnClickListener {
+
+            Log.d(javaClass.name, "${nCount++} clicked")
+
+            try{
+                val nResult = nMaxCount / (nMaxCount - nCount)
+                Log.d("MyLog", "nMaxCount / (nMaxCount - nCount) is ${nResult} ")
+
+            } catch ( e : Exception ){
+                Log.d("MyLog", "${nCount} : ${e.toString()}")
+
+            }
+
+
+        }
+    *
+    *
+    * */
+    /*
     *     var nLineNumber = 0
 
     // Activity가 생성될 때
